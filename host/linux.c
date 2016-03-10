@@ -334,7 +334,7 @@ mic_probe(struct pci_dev *pdev, const struct pci_device_id *ent)
 	err = sysfs_create_group(&mic_ctx->bd_info->bi_sysfsdev->kobj, &bd_attr_group);
 	mic_ctx->sysfs_state = sysfs_get_dirent(mic_ctx->bd_info->bi_sysfsdev->kobj.sd,
 #if (LINUX_VERSION_CODE > KERNEL_VERSION(2,6,35))
-				NULL,
+				//NULL,
 #endif
 				"state");
 
